@@ -12,6 +12,8 @@ namespace Sports.Data
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams  { get; set; }
         public DbSet<Coach> Coaches { get; set; }
-
+        public Context() : base("localsql")
+        {
+        }
     }
 }
