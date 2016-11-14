@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Sports.Data
 {
-    class Context : DbContext
+  public class Context : DbContext
     {
         public DbSet<Player> Players { get; set; }
         public DbSet<Team> Teams  { get; set; }

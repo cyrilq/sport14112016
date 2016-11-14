@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sports.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,15 @@ namespace Sports.UI
     {
         static void Main(string[] args)
         {
+            using (Context c = new Context()) {
+                foreach (var item in c.Teams)
+                {
+                    Console.WriteLine(item.Name);
+                }
+                Console.ReadKey();
+            }
+ 
         }
     }
+    
 }
